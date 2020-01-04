@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-binding.pry 
+
 
   post '/login' do
     @user = User.find_by(username: params[:username])
@@ -24,6 +24,7 @@ binding.pry
   end
 
   get '/account' do
+    binding.pry
     if !!Helpers.current_user(session)
       erb :account
     else
