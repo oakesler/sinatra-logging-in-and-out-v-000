@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
     if !!User.find_by(username: params[:username])
       erb :account
     else 
-      erb :assert_operator
+      erb :error
     #if !!Helpers.current_user(session)
       #erb :account
     #else
