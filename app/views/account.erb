@@ -11,7 +11,7 @@
       <p> Welcome <%=Helpers.current_user(session).username%></p>
       <p> Welcome <%=Helpers.current_user(session).balance%></p>
     <% elsif Helpers.current_user(session) == nil %>
-      <p>You Must to View Your Balance</p>
+      <p>You Must <a href="/">Log In</a> to View Your Balance</p>
       <% else %>
       <p>You Must <a href="/">Log In</a> to View Your Balance</p>
     <% end %>
