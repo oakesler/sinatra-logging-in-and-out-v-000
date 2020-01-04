@@ -9,6 +9,7 @@
     
     <% if Helpers.current_user(session) != nil%>
       <p> Welcome <%=Helpers.current_user(session).username%></p>
+      <p> Welcome <%=Helpers.current_user(session).balance%></p>
     <% else %>
       <p>Welcome </p>
     <% end %>
