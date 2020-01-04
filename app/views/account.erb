@@ -7,12 +7,12 @@
   </head>
   <body id="page-top">
     
-    <% if !self.is_logged_in?(session)%>
+    <% if !User.is_logged_in?(session)%>
     <p>You Must <a href="/">Log In</a> to View Your Balance </p>
     <% else %>
     <p>Welcome <%=Helpers.current_user(session).username%></p>
     <p>Welcome <%=Helpers.current_user(session).balance%></p>
-      <% end %>
+    <% end %>
   
   
   <a href="/logout">Log Out</a>
