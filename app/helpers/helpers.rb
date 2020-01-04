@@ -5,6 +5,7 @@ class Helpers < Sinatra::Base
       user 
     else
       nil 
+    end
   end
 
   def self.is_logged_in?(session)
