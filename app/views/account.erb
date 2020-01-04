@@ -7,7 +7,7 @@
   </head>
   <body id="page-top">
     
-    <% if !Helpers.is_logged_in?(session) %>
+    <% if !Helpers.is_logged_in?(session) && Helpers.current_user(session) == nil%>
       <p>You Must <a href="/">Log In</a> to View Your Balance</p>
     <% else %>
       <p>Welcome <%=Helpers.current_user(session).username%></p>
