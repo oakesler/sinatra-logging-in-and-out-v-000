@@ -26,6 +26,7 @@ class ApplicationController < Sinatra::Base
       erb :account
     else 
       erb :error
+    end
     #if !!Helpers.current_user(session)
       #erb :account
     #else
