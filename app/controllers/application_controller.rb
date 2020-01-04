@@ -23,9 +23,9 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     if !!Helpers.current_user(session)
-      redirect to("/error")
-    else
       erb :account
+    else
+      redirect to("/error")
     end
   end
       
