@@ -21,13 +21,13 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  get '/account' do
-    binding.pry
-    if !!Helpers.current_user(session)
-      erb :account
-    else
-      redirect to("/error")
-    end
+  get '/account' do 
+    erb :account
+    #if !!Helpers.current_user(session)
+      #erb :account
+    #else
+      #redirect to("/error")
+    #end
   end
       
   get '/logout' do
