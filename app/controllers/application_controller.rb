@@ -10,9 +10,7 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :index
   end
-
-
-
+  
   post '/login' do
     @user = User.find_by(username: params[:username])
     if !!@user
